@@ -19,8 +19,8 @@ Nextcloud を nginx (Web サーバー) + MariaDB + Redis の構成で Docker Com
 cp .env.example .env
 ```
 
-`.env` を開き、パスワードなどを必要に応じて変更してください。
-`MYSQL_ROOT_HOST` はデフォルトで `%`（すべてのホストを許可）に設定してあり、アプリケーションコンテナからの接続拒否 (`Host 'xxx' is not allowed to connect`) を防ぎます。
+`.env` を開き、パスワードなどを必要に応じて変更してください。  
+`MYSQL_ROOT_HOST` はデフォルトで `172.%`（Docker の内部ネットワーク範囲を想定）に設定してあり、アプリケーションコンテナからの接続拒否 (`Host 'xxx' is not allowed to connect`) を防ぎつつ、不要に広い許可を避けています。環境に合わせて必要であれば調整してください。
 
 ### 2. コンテナの起動
 
