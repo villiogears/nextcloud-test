@@ -20,6 +20,7 @@ cp .env.example .env
 ```
 
 `.env` を開き、パスワードなどを必要に応じて変更してください。
+`MYSQL_ROOT_HOST` はデフォルトで `%`（すべてのホストを許可）に設定してあり、アプリケーションコンテナからの接続拒否 (`Host 'xxx' is not allowed to connect`) を防ぎます。
 
 ### 2. コンテナの起動
 
