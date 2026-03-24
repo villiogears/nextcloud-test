@@ -1,0 +1,9 @@
+# Environment variables (copy from .env.example)
+.env
+
+# Docker volumes (local bind-mount data)
+data/
+
+# OS
+.DS_Store
+Thumbs.db
